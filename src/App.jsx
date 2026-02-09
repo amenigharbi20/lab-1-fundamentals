@@ -11,7 +11,10 @@ function App() {
   return (
     <>
     <Greeting />
-     <StatusBadge />
+    <StatusBadge />
+    <UserCard name="Alice" email={"alice@example.com"} role="Developer" />
+    <UserCard name="Bob" email={"bob@example.com"} role="Designer" />
+    <UserCard name="Charlie" email={"charlie@example.com"} role="Manager" />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
