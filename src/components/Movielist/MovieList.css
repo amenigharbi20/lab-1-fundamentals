@@ -1,0 +1,46 @@
+.movie-list {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 20px;
+}
+
+.movie-list-title {
+  text-align: center;
+  color: #1e293b;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.movie-list-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .movie-list-title {
+    font-size: 2.2rem;
+  }
+}

@@ -1,43 +1,94 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Global Variables - Unified with index.css */
+:root {
+  --primary: #667eea;
+  --primary-dark: #764ba2;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --border: #e2e8f0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* Section Styling */
+.section {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.section-title {
   text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 3px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Flex Container for Cards and Items */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Movie Grid Layout */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem 0.5rem;
+  }
+
+  .section {
+    margin: 2rem auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .flex-container {
+    gap: 1rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-

@@ -1,0 +1,57 @@
+.status-badge {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  min-width: 280px;
+}
+
+.status-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.badge {
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.badge.online {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #166534;
+  border: 2px solid #22c55e;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.badge.online:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3);
+}
+
+.badge.offline {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #991b1b;
+  border: 2px solid #ef4444;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.badge.offline:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.3);
+}
+
+.status-message {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
